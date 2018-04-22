@@ -1,6 +1,7 @@
 package com.an.steam.service;
 
-import com.ca.steam.bean.User;
+
+import com.an.steam.bean.User;
 
 public interface UserService {
 

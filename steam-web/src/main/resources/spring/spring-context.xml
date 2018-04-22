@@ -12,7 +12,7 @@
         </property>
     </bean>
 
-    <context:component-scan base-package="com.ca.steam">
+    <context:component-scan base-package="com.an.steam">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 

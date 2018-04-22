@@ -138,11 +138,11 @@
                 <version>${spring.version}</version>
             </dependency>
             <!--freemarker -->
-            <dependency>
-                <groupId>org.freemarker</groupId>
-                <artifactId>freemarker</artifactId>
-                <version>${freemarker.version}</version>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>org.freemarker</groupId>-->
+                <!--<artifactId>freemarker</artifactId>-->
+                <!--<version>${freemarker.version}</version>-->
+            <!--</dependency>-->
             <!-- guava -->
             <dependency>
                 <groupId>com.google.guava</groupId>

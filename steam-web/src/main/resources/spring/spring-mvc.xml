@@ -5,7 +5,7 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!-- 1、包扫描 -->
-    <context:component-scan base-package="com.ca.steam.web" use-default-filters="false">
+    <context:component-scan base-package="com.an.steam.web.controller" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
         <context:include-filter type="annotation"
                                 expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
@@ -13,12 +13,9 @@
     <!-- 2、视图解析器 -->
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="order" value="1" />
         <property name="prefix" value="/WEB-INF/pages/"></property>
         <property name="suffix" value=".ftl"></property>
     </bean>
-
-
 
     <!-- 4、启动注解 -->
     <mvc:annotation-driven/>

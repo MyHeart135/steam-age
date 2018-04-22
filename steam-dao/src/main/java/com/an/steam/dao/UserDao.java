@@ -1,6 +1,7 @@
 package com.an.steam.dao;
 
 
+import com.an.steam.bean.User;
 
 public interface UserDao {
 

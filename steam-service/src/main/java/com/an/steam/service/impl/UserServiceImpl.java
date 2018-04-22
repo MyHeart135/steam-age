@@ -1,7 +1,9 @@
 package com.an.steam.service.impl;
 
 
+import com.an.steam.bean.User;
 import com.an.steam.dao.UserDao;
+import com.an.steam.manager.UserManager;
 import com.an.steam.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +15,13 @@ public class UserServiceImpl implements UserService {
     @Resource
     private UserDao userDao;
 
+    @Resource
+    private UserManager userManager;
+
+
     @Override
     public Integer saveUser(User user) {
-        return userDao.insert(user);
+        return userManager.inserUser(user);
     }
 
     @Override

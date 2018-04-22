@@ -12,7 +12,7 @@
     <artifactId>steam-web</artifactId>
     <packaging>war</packaging>
 
-    <name>steam-web Maven Webapp</name>
+    <name>steam-web</name>
     <dependencies>
         <dependency>
             <groupId>com.an.steam</groupId>
@@ -33,4 +33,6 @@
             <artifactId>freemarker</artifactId>
         </dependency>
     </dependencies>
+
+
 </project>

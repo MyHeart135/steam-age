@@ -22,7 +22,7 @@
     </settings>
 
     <typeAliases>
-        <typeAlias alias="User" type="com.ca.steam.bean.User"/>
+        <typeAlias alias="User" type="com.an.steam.bean.User"/>
     </typeAliases>
 
     <plugins>
