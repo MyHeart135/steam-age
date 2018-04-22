@@ -16,6 +16,7 @@
         <module>steam-manager</module>
         <module>steam-service</module>
         <module>steam-web</module>
+        <module>steam-util</module>
     </modules>
 
     <build>

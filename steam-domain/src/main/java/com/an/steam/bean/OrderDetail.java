@@ -3,24 +3,22 @@ package com.an.steam.bean;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Item {
-    private Long id;
+public class OrderDetail {
+    private String id;
 
     private String goodsNo;
 
-    private String title;
+    private String orderNo;
 
-    private String sellPoint;
+    private Integer num;
+
+    private String title;
 
     private BigDecimal price;
 
-    private Integer stock;
+    private BigDecimal totalFee;
 
-    private String barcode;
-
-    private String image;
-
-    private Byte status;
+    private String picPath;
 
     private Date createTime;
 
@@ -36,12 +34,12 @@ public class Item {
 
     private Byte version;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(String id) {
+        this.id = id == null ? null : id.trim();
     }
 
     public String getGoodsNo() {
@@ -52,20 +50,28 @@ public class Item {
         this.goodsNo = goodsNo == null ? null : goodsNo.trim();
     }
 
+    public String getOrderNo() {
+        return orderNo;
+    }
+
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo == null ? null : orderNo.trim();
+    }
+
+    public Integer getNum() {
+        return num;
+    }
+
+    public void setNum(Integer num) {
+        this.num = num;
+    }
+
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title == null ? null : title.trim();
-    }
-
-    public String getSellPoint() {
-        return sellPoint;
-    }
-
-    public void setSellPoint(String sellPoint) {
-        this.sellPoint = sellPoint == null ? null : sellPoint.trim();
     }
 
     public BigDecimal getPrice() {
@@ -76,36 +82,20 @@ public class Item {
         this.price = price;
     }
 
-    public Integer getStock() {
-        return stock;
+    public BigDecimal getTotalFee() {
+        return totalFee;
     }
 
-    public void setStock(Integer stock) {
-        this.stock = stock;
+    public void setTotalFee(BigDecimal totalFee) {
+        this.totalFee = totalFee;
     }
 
-    public String getBarcode() {
-        return barcode;
+    public String getPicPath() {
+        return picPath;
     }
 
-    public void setBarcode(String barcode) {
-        this.barcode = barcode == null ? null : barcode.trim();
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image == null ? null : image.trim();
-    }
-
-    public Byte getStatus() {
-        return status;
-    }
-
-    public void setStatus(Byte status) {
-        this.status = status;
+    public void setPicPath(String picPath) {
+        this.picPath = picPath == null ? null : picPath.trim();
     }
 
     public Date getCreateTime() {

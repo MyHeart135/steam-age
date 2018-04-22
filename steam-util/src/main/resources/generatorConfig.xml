@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <!--targetRuntime=“MyBatis3“可以生成带条件的增删改查-->
+    <!--targetRuntime=“MyBatis3Simple“可以生成基本的增删改查-->
+    <context id="mysqlTables" targetRuntime="MyBatis3Simple">
+        <!--去除生成的注释-->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!--数据库连接信息配置-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/steam"
+                        userId="root" password="root">
+        </jdbcConnection>
+        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
+             NUMERIC 类型解析为java.math.BigDecimal -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+        <!--javaBean的生成策略-->
+        <javaModelGenerator targetPackage="com.an.steam.bean" targetProject=".\src\main\java">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false"/>
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!--映射文件的生成策略-->
+        <sqlMapGenerator targetPackage="mybatis.mapper" targetProject=".\src\main\resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!--dao接口java文件的生成策略-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.an.steam.dao"
+                             targetProject=".\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!--数据表与javaBean的映射-->
+        <table tableName="tb_order_m" domainObjectName="OrderMain"></table>
+        <table tableName="tb_item" domainObjectName="Item"></table>
+        <table tableName="tb_order_d" domainObjectName="OrderDetail"></table>
+        <table tableName="tb_user" domainObjectName="User"></table>
+    </context>
+
+</generatorConfiguration>
