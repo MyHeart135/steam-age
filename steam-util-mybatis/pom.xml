@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>steam-util</artifactId>
+    <artifactId>steam-util-mybatis</artifactId>
     <packaging>jar</packaging>
-    <name>steam-util</name>
+    <name>steam-util-mybatis</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

@@ -16,7 +16,8 @@
         <module>steam-manager</module>
         <module>steam-service</module>
         <module>steam-web</module>
-        <module>steam-util</module>
+        <module>steam-util-mybatis</module>
+        <module>steam-utils</module>
     </modules>
 
     <build>
